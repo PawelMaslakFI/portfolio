@@ -1,0 +1,32 @@
+    
+    //Global variables
+
+//Fonts
+@font-face {
+    font-family: "Montserrat-Bold";
+    src: local("Montserrat-Bold"), url(../fonts/Montserrat-Bold.ttf) format("truetype");
+}
+@font-face {
+    font-family: "Montserrat-Light";
+    src: local("Montserrat-Light"), url(../fonts/Montserrat-Light.ttf) format("truetype");
+}
+@font-face {
+    font-family: "Montserrat-Thin";
+    src: local("Montserrat-Thin"), url(../fonts/Montserrat-Thin.ttf) format("truetype");
+}
+@font-face {
+    font-family: "Rosemary";
+    src: local("Rosemary"), url(../fonts/Rosemary.ttf) format("truetype");
+}
+
+$Font-Bold: 'Montserrat-Bold';
+$Font-Normal: 'Montserrat-Light';
+$Font-Thin: 'Montserrat-Thin';
+$Font-Special: 'Rosemary';
+
+//Colors
+$colorA: #3A4042;
+$colorB: #67E2FF;
+$colorC: #CEFAFF;
+$colorD: #6095A8;
+$colorE: #92D3E6;

@@ -1,0 +1,68 @@
+@import './global';
+
+.navbar{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 0 10px;
+    height: 10vh;
+    background-color: $colorA;
+    color: $colorC;
+    display: flex;
+    align-items: center;
+
+    .wrapper{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+        .nav-left{
+
+        }
+
+        .nav-right{
+            height: 100%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+
+            .nav-item{
+                height: 100%;
+                padding: 0 15px;
+                margin: 0 5px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                transition: all 0.5s ease-in-out;
+                letter-spacing: 0.2rem;
+                font-size: 1rem;
+            }
+            .nav-item:hover{
+                background-color: $colorD;
+                color: $colorA;
+                cursor: pointer;
+            }
+
+            .nav-item::after{
+                content: '';
+                background-color: $colorB;
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                height: 0;
+                transition: all .5s ease-in-out;
+            }
+
+            .nav-item:hover::after {
+                bottom: 0;
+                height: 10%;
+              }
+        }
+    }
+}

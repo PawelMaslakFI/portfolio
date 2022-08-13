@@ -1,0 +1,47 @@
+@import './global';
+
+.background{
+    background-color: $colorC;
+    position: relative;
+    min-height: 100vh;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    z-index: -1;
+
+    .points{
+        position: relative;
+        display: flex;
+
+        span{
+            position: relative;
+            width: 10px;
+            height: 10px;
+            background-color: $colorD;
+            box-shadow: 0 0 0 2px $colorE,
+                        0 0 20px $colorD,
+                        0 0 60px $colorD;
+            margin: 0 15px;
+            border-radius: 50%;
+            animation: animate linear infinite;
+        }
+        
+        span:nth-of-type(even){
+            background-color: $colorA;
+            box-shadow: 0 0 0 2px $colorD,
+                        0 0 20px $colorA,
+                        0 0 60px $colorA; 
+        }
+    }
+}
+
+@keyframes animate {
+    0%
+    {
+        transform: translateY(110vh) scale(0);
+    }
+    100%
+    {
+        transform: translateY(-10vh) scale(1);
+    }
+}
