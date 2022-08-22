@@ -17,7 +17,7 @@ const Background = () => {
     useEffect(() => {
         if (element) {
             element.innerHTML = '';
-            for (let i = 0; (width / 40) > i; i++) {
+            for (let i = 1; (width / 35) > i; i++) {
                 let span = document.createElement("span");
                 span.style.animationDelay = (Math.random() * 15)+ 's';
                 span.style.animationDuration = (Math.random() * (20 - 10) + 10)+ 's';

@@ -7,7 +7,9 @@
     height: 100%;
     width: 100%;
     overflow: hidden;
-    z-index: -1;
+    z-index: -10;
+    display: flex;
+    justify-content: center;
 
     .points{
         position: relative;
@@ -15,27 +17,27 @@
 
         span{
             position: relative;
-            width: 10px;
-            height: 10px;
+            width: 5px;
+            height: 5px;
             background-color: $colorD;
             box-shadow: 0 0 0 2px $colorE,
-                        0 0 20px $colorD,
-                        0 0 60px $colorD;
+                        0 0 10px $colorD,
+                        0 0 30px $colorD;
             margin: 0 15px;
             border-radius: 50%;
-            animation: animate linear infinite;
+            animation: animateBackgroundPoints linear infinite;
         }
         
         span:nth-of-type(even){
             background-color: $colorA;
             box-shadow: 0 0 0 2px $colorD,
-                        0 0 20px $colorA,
-                        0 0 60px $colorA; 
+                        0 0 10px $colorA,
+                        0 0 30px $colorA; 
         }
     }
 }
 
-@keyframes animate {
+@keyframes animateBackgroundPoints {
     0%
     {
         transform: translateY(110vh) scale(0);

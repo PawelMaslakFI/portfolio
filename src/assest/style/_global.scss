@@ -19,10 +19,10 @@
     src: local("Rosemary"), url(../fonts/Rosemary.ttf) format("truetype");
 }
 
-$Font-Bold: 'Montserrat-Bold';
-$Font-Normal: 'Montserrat-Light';
-$Font-Thin: 'Montserrat-Thin';
-$Font-Special: 'Rosemary';
+$fontBold: 'Montserrat-Bold';
+$fontNormal: 'Montserrat-Light';
+$fontThin: 'Montserrat-Thin';
+$fontSpecial: 'Rosemary';
 
 //Colors
 $colorA: #3A4042;
@@ -30,3 +30,12 @@ $colorB: #67E2FF;
 $colorC: #CEFAFF;
 $colorD: #6095A8;
 $colorE: #92D3E6;
+
+//Breakpoints
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+
+//Paddings
+$pading: 0 clamp(20px, 7vw, 200px);
