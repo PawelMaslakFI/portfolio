@@ -1,6 +1,7 @@
 import Background from "./components/Background";
 import Loader from "./components/Loader";
 import Navbar from "./components/Navbar";
+import Home from "./pages/Home";
 
 function App() {
     return (
@@ -8,6 +9,8 @@ function App() {
             <Loader/>
             <Navbar/>
             <Background/>
+
+            <Home/>
         </div>
     );
 }
