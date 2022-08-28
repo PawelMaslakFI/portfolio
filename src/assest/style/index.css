@@ -509,8 +509,8 @@
   height: 100%;
   background-color: #3A4042;
   z-index: 2;
-  -webkit-animation: fade-out-of-screen 1s ease-out 6.5s forwards;
-          animation: fade-out-of-screen 1s ease-out 6.5s forwards;
+  -webkit-animation: fade-out-of-screen 1s ease-out 4s forwards;
+          animation: fade-out-of-screen 1s ease-out 4s forwards;
 }
 
 .container .logo {
@@ -539,8 +539,8 @@
   height: 100%;
   font-family: "Montserrat-Bold";
   font-size: 3rem;
-  -webkit-animation: logo-left 4s linear 2s forwards;
-          animation: logo-left 4s linear 2s forwards;
+  -webkit-animation: logo-left 2s linear 1s forwards;
+          animation: logo-left 2s linear 1s forwards;
 }
 
 .container .logo .left span {
@@ -553,16 +553,16 @@
 }
 
 .container .logo .left span:nth-of-type(2), .container .logo .left span:nth-of-type(3), .container .logo .left span:nth-of-type(4), .container .logo .left span:nth-of-type(5) {
-  -webkit-animation: fade-out 1s ease-out 4s forwards;
-          animation: fade-out 1s ease-out 4s forwards;
+  -webkit-animation: fade-out 1s ease-out 1.8s forwards;
+          animation: fade-out 1s ease-out 1.8s forwards;
 }
 
 .container .logo .right {
   height: 100%;
   font-family: "Montserrat-Thin";
   font-size: 3rem;
-  -webkit-animation: logo-right 4s linear 2s forwards;
-          animation: logo-right 4s linear 2s forwards;
+  -webkit-animation: logo-right 2s linear 1s forwards;
+          animation: logo-right 2s linear 1s forwards;
 }
 
 .container .logo .right span:nth-of-type(1) {
@@ -571,8 +571,8 @@
 }
 
 .container .logo .right span:nth-of-type(2), .container .logo .right span:nth-of-type(3), .container .logo .right span:nth-of-type(4), .container .logo .right span:nth-of-type(5) {
-  -webkit-animation: fade-out 1s ease-out 4s forwards;
-          animation: fade-out 1s ease-out 4s forwards;
+  -webkit-animation: fade-out 1s ease-out 1.8s forwards;
+          animation: fade-out 1s ease-out 1.8s forwards;
 }
 
 .container .loader {
@@ -582,8 +582,8 @@
   height: 100px;
   border-radius: 50%;
   background-color: #3A4042;
-  -webkit-animation: spin 3s linear infinite, fade-out 2s ease-out 4s forwards;
-          animation: spin 3s linear infinite, fade-out 2s ease-out 4s forwards;
+  -webkit-animation: spin 3s linear infinite, fade-out 2s ease-out 2s forwards;
+          animation: spin 3s linear infinite, fade-out 2s ease-out 2s forwards;
 }
 
 .container .loader::before {
@@ -652,11 +652,13 @@
   0% {
     opacity: 1;
   }
+  40% {
+    opacity: 1;
+  }
   100% {
     top: -100%;
     opacity: 0;
     display: none;
-    visibility: hidden;
   }
 }
 
@@ -664,11 +666,13 @@
   0% {
     opacity: 1;
   }
+  40% {
+    opacity: 1;
+  }
   100% {
     top: -100%;
     opacity: 0;
     display: none;
-    visibility: hidden;
   }
 }
 
