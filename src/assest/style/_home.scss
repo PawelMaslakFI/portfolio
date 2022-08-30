@@ -1,6 +1,6 @@
 @import './global';
 
-.home{
+.home {
     position: absolute;
     width: 100%;
     min-height: 100vh - $navHeight;
@@ -11,7 +11,7 @@
     justify-content: center;
     z-index: 0;
 
-    .wrapper{
+    .wrapper {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -28,29 +28,36 @@
         align-items: center;
         justify-content: center;
 
-        p{
+        p {
             @media (max-width:#{$sm}) {
                 letter-spacing: 0.2rem;
             }
+
             margin: 2vh;
             width: 100%;
             letter-spacing: 0.6rem;
         }
 
-        .p1{
+        .p1 {
             font-size: $fluidFontSize;
             text-align: start;
+            opacity: 0;
+            animation: slide-in-right 1s linear 1.5s forwards;
         }
 
-        .p2{
+        .p2 {
             font-size: $fluidFontSizeBig;
             font-family: $fontBold;
             text-align: center;
+            opacity: 0;
+            animation: focus-in 1s linear 1s forwards;
         }
 
-        .p3{
+        .p3 {
             font-size: $fluidFontSize;
             text-align: end;
+            opacity: 0;
+            animation: slide-in-left 1s linear 1.5s forwards;
         }
     }
 
@@ -64,6 +71,8 @@
         right: -5px;
         border-top: 3px solid $colorA;
         border-right: 3px solid $colorA;
+        opacity: 0;
+        animation: top-border 2s linear forwards;
     }
 
     .content:before {
@@ -76,5 +85,74 @@
         left: -5px;
         border-bottom: 3px solid $colorA;
         border-left: 3px solid $colorA;
+        animation: bottom-border 2s linear forwards;
+    }
+}
+
+@keyframes top-border {
+    0% {
+        border-top: 3px solid $colorB;
+        border-right: 3px solid $colorB;
+        height: 0;
+        width: 0;
+        opacity: 0;
+        transform: translateY(200px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY();
+    }
+}
+
+@keyframes bottom-border {
+    0% {
+        border-bottom: 3px solid $colorB;
+        border-left: 3px solid $colorB;
+        height: 0;
+        width: 0;
+        opacity: 0;
+        transform: translateY(-200px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY();
+    }
+}
+
+@keyframes focus-in {
+    0% {
+        filter: blur(12px);
+        opacity: 0;
+    }
+
+    100% {
+        filter: blur(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-in-right {
+    0% {
+        transform: translateX(200px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-in-left {
+    0% {
+        transform: translateX(-200px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
     }
 }

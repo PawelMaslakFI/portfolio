@@ -1,6 +1,11 @@
 import React from 'react'
 
-const Loader = () => {
+const Loader = ({state}) => {
+
+    setTimeout(() => {
+        state(false)
+    }, 5000);
+
     return (
         <div className="container">
             <div className="logo">
