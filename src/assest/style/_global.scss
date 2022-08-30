@@ -24,6 +24,9 @@ $fontNormal: 'Montserrat-Light';
 $fontThin: 'Montserrat-Thin';
 $fontSpecial: 'Rosemary';
 
+$fluidFontSize: calc(15px + 0.390625vw);
+$fluidFontSizeBig: calc((15px + 0.390625vw) * 3);
+
 //Colors
 $colorA: #3A4042;
 $colorB: #67E2FF;
@@ -39,3 +42,6 @@ $xl: 1200px;
 
 //Paddings
 $pading: 0 clamp(20px, 7vw, 200px);
+
+//Variables
+$navHeight: 10vh;

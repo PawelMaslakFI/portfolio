@@ -1,5 +1,80 @@
 @import './global';
 
 .home{
+    position: absolute;
+    width: 100%;
+    min-height: 100vh - $navHeight;
+    top: 0;
+    margin-top: $navHeight;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 0;
 
+    .wrapper{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: $pading;
+        width: 100%;
+    }
+
+    .content {
+        background-color: rgba(206, 250, 255, 0.5);
+        position: relative;
+        width: fit-content;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        p{
+            @media (max-width:#{$sm}) {
+                letter-spacing: 0.2rem;
+            }
+            margin: 2vh;
+            width: 100%;
+            letter-spacing: 0.6rem;
+        }
+
+        .p1{
+            font-size: $fluidFontSize;
+            text-align: start;
+        }
+
+        .p2{
+            font-size: $fluidFontSizeBig;
+            font-family: $fontBold;
+            text-align: center;
+        }
+
+        .p3{
+            font-size: $fluidFontSize;
+            text-align: end;
+        }
+    }
+
+    .content:after {
+        display: block;
+        content: "";
+        width: 100%;
+        height: 10%;
+        position: absolute;
+        top: -5px;
+        right: -5px;
+        border-top: 3px solid $colorA;
+        border-right: 3px solid $colorA;
+    }
+
+    .content:before {
+        display: block;
+        content: "";
+        width: 100%;
+        height: 10%;
+        position: absolute;
+        bottom: -5px;
+        left: -5px;
+        border-bottom: 3px solid $colorA;
+        border-left: 3px solid $colorA;
+    }
 }
