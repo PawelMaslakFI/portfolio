@@ -13,6 +13,7 @@
     background-color: $colorA;
     z-index: 2;
     animation: fade-out-of-screen 1s ease-out 4s forwards;
+    overflow: hidden;
 
     .logo{
         position: relative;

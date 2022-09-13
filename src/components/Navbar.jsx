@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
 
@@ -17,15 +18,17 @@ const Navbar = () => {
         <div className="navbar" onClick={toggleDropdown}>
             <div className="wrapper">
                 <div className="nav-left">
+                    <Link to="/">
                     <div className="logo">
                         <div className="left">K</div>
                         <div className="right">K</div>
                     </div>
+                    </Link>
                 </div>
                 <div className="nav-right">
-                    <a href="#">
+                    <Link to="/about">
                         <div className="nav-item">About</div>
-                    </a>
+                    </Link>
                     <a href="#">
                         <div className="nav-item">Skills</div>
                     </a>

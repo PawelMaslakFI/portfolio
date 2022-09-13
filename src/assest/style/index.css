@@ -512,6 +512,7 @@
   z-index: 2;
   -webkit-animation: fade-out-of-screen 1s ease-out 4s forwards;
           animation: fade-out-of-screen 1s ease-out 4s forwards;
+  overflow: hidden;
 }
 
 .container .logo {
@@ -765,6 +766,147 @@
   }
 }
 
+.about {
+  position: absolute;
+  width: 100%;
+  min-height: 90vh;
+  top: 0;
+  margin-top: 10vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.about .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0 clamp(20px, 7vw, 200px);
+  padding: 20px 20px;
+  width: 100%;
+  background-color: rgba(206, 250, 255, 0.5);
+  -webkit-animation: flip-in-bottom 2s ease-in-out forwards;
+          animation: flip-in-bottom 2s ease-in-out forwards;
+}
+
+.about .wrapper .title {
+  font-size: calc((15px + 0.390625vw) * 3);
+  font-family: "Montserrat-Bold";
+  text-align: start;
+  opacity: 0;
+  -webkit-animation: focus-in-expand 2s ease-in-out 1s forwards;
+          animation: focus-in-expand 2s ease-in-out 1s forwards;
+}
+
+.about .wrapper .content {
+  font-size: calc(15px + 0.390625vw);
+  opacity: 0;
+  -webkit-animation: focus-in 1s ease-in-out 1.5s forwards;
+          animation: focus-in 1s ease-in-out 1.5s forwards;
+}
+
+@-webkit-keyframes flip-in-bottom {
+  0% {
+    -webkit-transform: rotateX(90deg);
+            transform: rotateX(90deg);
+    opacity: 0;
+    border-left: solid 20px #67E2FF;
+  }
+  100% {
+    -webkit-transform: rotateX(0);
+            transform: rotateX(0);
+    opacity: 1;
+    border-left: solid 5px #67E2FF;
+  }
+}
+
+@keyframes flip-in-bottom {
+  0% {
+    -webkit-transform: rotateX(90deg);
+            transform: rotateX(90deg);
+    opacity: 0;
+    border-left: solid 20px #67E2FF;
+  }
+  100% {
+    -webkit-transform: rotateX(0);
+            transform: rotateX(0);
+    opacity: 1;
+    border-left: solid 5px #67E2FF;
+  }
+}
+
+@-webkit-keyframes focus-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    -webkit-filter: blur(12px);
+            filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes focus-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    -webkit-filter: blur(12px);
+            filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+            filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+            filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+}
+
 @font-face {
   font-family: "Montserrat-Bold";
   src: local("Montserrat-Bold"), url(../fonts/Montserrat-Bold.ttf) format("truetype");
@@ -801,6 +943,7 @@
       -ms-flex-pack: center;
           justify-content: center;
   z-index: 0;
+  overflow: hidden;
 }
 
 .home .wrapper {
@@ -969,19 +1112,6 @@
     opacity: 1;
     -webkit-transform: translateY();
             transform: translateY();
-  }
-}
-
-@-webkit-keyframes focus-in {
-  0% {
-    -webkit-filter: blur(12px);
-            filter: blur(12px);
-    opacity: 0;
-  }
-  100% {
-    -webkit-filter: blur(0px);
-            filter: blur(0px);
-    opacity: 1;
   }
 }
 
