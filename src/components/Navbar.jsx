@@ -46,9 +46,9 @@ const Navbar = () => {
                 </div>
             </div>
             <div className={isActive ? "dropdown-menu is-active" : "dropdown-menu"}>
-                <a href="#">
+                <Link to="/about">
                     <div className="nav-item">About</div>
-                </a>
+                </Link>
                 <a href="#">
                     <div className="nav-item">Skills</div>
                 </a>
