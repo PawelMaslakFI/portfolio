@@ -4,8 +4,11 @@
 
 ### Some stuff done
 Loader
+
 Animated BG
+
 Home
+
 About
 
 
