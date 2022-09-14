@@ -43,7 +43,7 @@
             font-size: $fluidFontSize;
             text-align: start;
             opacity: 0;
-            animation: slide-in-right 1s linear 1.5s forwards;
+            animation: slide-in-right 1s linear 2.5s forwards;
         }
 
         .p2 {
@@ -51,14 +51,14 @@
             font-family: $fontBold;
             text-align: center;
             opacity: 0;
-            animation: focus-in 1s linear 1s forwards;
+            animation: focus-in 1s linear 2s forwards;
         }
 
         .p3 {
             font-size: $fluidFontSize;
             text-align: end;
             opacity: 0;
-            animation: slide-in-left 1s linear 1.5s forwards;
+            animation: slide-in-left 1s linear 2.5s forwards;
         }
     }
 
@@ -73,7 +73,7 @@
         border-top: 3px solid $colorA;
         border-right: 3px solid $colorA;
         opacity: 0;
-        animation: top-border 2s linear forwards;
+        animation: top-border 1.5s linear 1s forwards;
     }
 
     .content:before {
@@ -86,7 +86,8 @@
         left: -5px;
         border-bottom: 3px solid $colorA;
         border-left: 3px solid $colorA;
-        animation: bottom-border 2s linear forwards;
+        opacity: 0;
+        animation: bottom-border 1.5s linear 1s forwards;
     }
 }
 

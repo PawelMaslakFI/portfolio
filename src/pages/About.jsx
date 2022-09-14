@@ -1,8 +1,13 @@
-import React from 'react'
+import { motion } from 'framer-motion';
+import React from 'react';
 
 const About = () => {
     return (
-        <div className="about">
+        <motion.div className="about"
+            initial={{opacity: 0}}
+            animate={{opacity: 1}}
+            exit={{opacity: 0, scale: 0, transition: { duration: 1 }}}
+            >
             <div className="wrapper">
                 <div className="title">
                     About Me
@@ -14,7 +19,7 @@ const About = () => {
                     and so far I gained front-end skills that I want to constantly improve.
                 </div>
             </div>
-        </div>
+        </motion.div>
     )
 }
 

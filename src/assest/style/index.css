@@ -997,8 +997,8 @@
   font-size: calc(15px + 0.390625vw);
   text-align: start;
   opacity: 0;
-  -webkit-animation: slide-in-right 1s linear 1.5s forwards;
-          animation: slide-in-right 1s linear 1.5s forwards;
+  -webkit-animation: slide-in-right 1s linear 2.5s forwards;
+          animation: slide-in-right 1s linear 2.5s forwards;
 }
 
 .home .content .p2 {
@@ -1006,16 +1006,16 @@
   font-family: "Montserrat-Bold";
   text-align: center;
   opacity: 0;
-  -webkit-animation: focus-in 1s linear 1s forwards;
-          animation: focus-in 1s linear 1s forwards;
+  -webkit-animation: focus-in 1s linear 2s forwards;
+          animation: focus-in 1s linear 2s forwards;
 }
 
 .home .content .p3 {
   font-size: calc(15px + 0.390625vw);
   text-align: end;
   opacity: 0;
-  -webkit-animation: slide-in-left 1s linear 1.5s forwards;
-          animation: slide-in-left 1s linear 1.5s forwards;
+  -webkit-animation: slide-in-left 1s linear 2.5s forwards;
+          animation: slide-in-left 1s linear 2.5s forwards;
 }
 
 .home .content:after {
@@ -1029,8 +1029,8 @@
   border-top: 3px solid #3A4042;
   border-right: 3px solid #3A4042;
   opacity: 0;
-  -webkit-animation: top-border 2s linear forwards;
-          animation: top-border 2s linear forwards;
+  -webkit-animation: top-border 1.5s linear 1s forwards;
+          animation: top-border 1.5s linear 1s forwards;
 }
 
 .home .content:before {
@@ -1043,8 +1043,9 @@
   left: -5px;
   border-bottom: 3px solid #3A4042;
   border-left: 3px solid #3A4042;
-  -webkit-animation: bottom-border 2s linear forwards;
-          animation: bottom-border 2s linear forwards;
+  opacity: 0;
+  -webkit-animation: bottom-border 1.5s linear 1s forwards;
+          animation: bottom-border 1.5s linear 1s forwards;
 }
 
 @-webkit-keyframes top-border {

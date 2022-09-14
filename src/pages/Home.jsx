@@ -1,8 +1,13 @@
-import React from 'react'
+import { motion } from 'framer-motion';
+import React from 'react';
 
 const Home = () => {
     return (
-        <div className="home">
+        <motion.div className="home"
+            initial={{opacity: 0}}
+            animate={{opacity: 1}}
+            exit={{opacity: 0, scale: 0, transition: { duration: 1 }}}
+            >
             <div className="wrapper">
                 <div className="content">
                     <p className="p1">
@@ -16,7 +21,7 @@ const Home = () => {
                     </p>
                 </div>
             </div>
-        </div>
+        </motion.div>
     )
 }
 
