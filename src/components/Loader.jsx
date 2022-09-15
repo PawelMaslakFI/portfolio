@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Loader = ({state}) => {
+const Loader = ({ state }) => {
 
     setTimeout(() => {
         state(false)
@@ -24,9 +24,6 @@ const Loader = ({state}) => {
                     <span>H</span>
                 </div>
             </div>
-            {/* <div className="loader">
-                <span></span>
-            </div> */}
         </div>
     )
 }
