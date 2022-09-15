@@ -24,9 +24,9 @@ const Loader = ({state}) => {
                     <span>H</span>
                 </div>
             </div>
-            <div className="loader">
+            {/* <div className="loader">
                 <span></span>
-            </div>
+            </div> */}
         </div>
     )
 }
