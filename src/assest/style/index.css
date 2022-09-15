@@ -141,18 +141,21 @@
   transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
 }
 
-.navbar .wrapper .nav-left .logo:hover {
+.navbar .wrapper .nav-left .logo:hover,
+.navbar .wrapper .nav-left .logo.active {
   background-color: #6095A8;
   color: #3A4042;
   cursor: pointer;
 }
 
-.navbar .wrapper .nav-left .logo:hover .left {
+.navbar .wrapper .nav-left .logo:hover .left,
+.navbar .wrapper .nav-left .logo.active .left {
   -webkit-transform: rotateY(180deg) translateX(-29px);
           transform: rotateY(180deg) translateX(-29px);
 }
 
-.navbar .wrapper .nav-left .logo:hover .right {
+.navbar .wrapper .nav-left .logo:hover .right,
+.navbar .wrapper .nav-left .logo.active .right {
   -webkit-transform: translateX(-26px);
           transform: translateX(-26px);
 }
@@ -169,7 +172,8 @@
   transition: all .5s ease-in-out;
 }
 
-.navbar .wrapper .nav-left .logo:hover::after {
+.navbar .wrapper .nav-left .logo:hover::after,
+.navbar .wrapper .nav-left .logo.active::after {
   bottom: 0;
   height: 10%;
 }
@@ -216,7 +220,8 @@
   font-size: 1rem;
 }
 
-.navbar .wrapper .nav-right .nav-item:hover {
+.navbar .wrapper .nav-right .nav-item:hover,
+.navbar .wrapper .nav-right .nav-item.active {
   background-color: #6095A8;
   color: #3A4042;
   cursor: pointer;
@@ -234,7 +239,8 @@
   transition: all .5s ease-in-out;
 }
 
-.navbar .wrapper .nav-right .nav-item:hover::after {
+.navbar .wrapper .nav-right .nav-item:hover::after,
+.navbar .wrapper .nav-right .nav-item.active::after {
   bottom: 0;
   height: 10%;
 }
@@ -355,7 +361,8 @@
   font-size: 1.5rem;
 }
 
-.navbar .dropdown-menu .nav-item:hover {
+.navbar .dropdown-menu .nav-item:hover,
+.navbar .dropdown-menu .nav-item.active {
   background-color: #6095A8;
   color: #3A4042;
   cursor: pointer;
@@ -373,7 +380,8 @@
   transition: all .5s ease-in-out;
 }
 
-.navbar .dropdown-menu .nav-item:hover::after {
+.navbar .dropdown-menu .nav-item:hover::after,
+.navbar .dropdown-menu .nav-item.active::after {
   bottom: 0;
   height: 10%;
 }

@@ -6,6 +6,7 @@
     color: $colorA;
     cursor: pointer;
 }
+
 @mixin after {
     content: '';
     background-color: $colorB;
@@ -16,6 +17,7 @@
     height: 0;
     transition: all .5s ease-in-out;
 }
+
 @mixin hoverAfter {
     bottom: 0;
     height: 10%;
@@ -28,10 +30,10 @@
     padding: 0;
     width: 100%;
     height: 100%;
-    margin: 0 5px; 
+    margin: 0 5px;
 }
 
-.navbar{
+.navbar {
     position: fixed;
     top: 0;
     width: 100%;
@@ -42,7 +44,7 @@
     align-items: center;
     z-index: 1;
 
-    .wrapper{
+    .wrapper {
         padding: $pading;
         width: 100%;
         height: 100%;
@@ -53,17 +55,17 @@
         background-color: $colorA;
         z-index: 2;
 
-        a{
+        a {
             @include aTag();
         }
-        
-        .nav-left{
+
+        .nav-left {
             height: 100%;
             display: flex;
             align-items: center;
             justify-content: center;
 
-            .logo{
+            .logo {
                 height: 100%;
                 display: flex;
                 align-items: center;
@@ -75,46 +77,54 @@
                 font-size: 2.5rem;
                 transition: all 0.5s ease-in-out;
 
-                .left{
+                .left {
                     font-family: $fontThin;
                     transform: rotateY(180deg) translateX(-3px);
                     transition: transform 0.5s ease-in-out;
                 }
-                .right{
+
+                .right {
                     font-family: $fontBold;
                     transform: translateX(3px);
                     transition: transform 0.5s ease-in-out;
                 }
             }
-            .logo:hover{
+
+            .logo:hover,
+            .logo.active {
                 @include hover();
-                .left{
+
+                .left {
                     transform: rotateY(180deg) translateX(-29px);
                 }
-                .right{
+
+                .right {
                     transform: translateX(-26px);
                 }
             }
-            .logo::after{
+
+            .logo::after {
                 @include after();
             }
 
-            .logo:hover::after {
+            .logo:hover::after,
+            .logo.active::after {
                 @include hoverAfter();
             }
         }
 
-        .nav-right{
+        .nav-right {
             @media (max-width:#{$md}) {
                 display: none;
             }
+
             height: 100%;
             display: flex;
             align-items: center;
             justify-content: center;
             flex-direction: row;
 
-            .nav-item{
+            .nav-item {
                 height: 100%;
                 padding: 0 15px;
                 display: flex;
@@ -125,23 +135,27 @@
                 letter-spacing: 0.2rem;
                 font-size: 1rem;
             }
-            .nav-item:hover{
+
+            .nav-item:hover,
+            .nav-item.active {
                 @include hover();
             }
 
-            .nav-item::after{
+            .nav-item::after {
                 @include after();
             }
 
-            .nav-item:hover::after {
+            .nav-item:hover::after,
+            .nav-item.active::after {
                 @include hoverAfter();
             }
         }
 
-        .nav-hamburger{
+        .nav-hamburger {
             @media (max-width:#{$md}) {
                 display: flex;
             }
+
             display: none;
             flex-direction: column;
             justify-content: center;
@@ -149,40 +163,40 @@
             height: 100%;
             transition: all 0.5s ease-in-out;
 
-            .line{
-                width: 40px; 
+            .line {
+                width: 40px;
                 height: 5px;
                 background-color: $colorC;
                 display: block;
                 margin: 4px auto;
                 transition: all 0.3s ease-in-out;
-              }
+            }
         }
 
-        .nav-hamburger:hover{
+        .nav-hamburger:hover {
             cursor: pointer;
         }
 
-        .nav-hamburger.is-active{
+        .nav-hamburger.is-active {
             background-color: $colorD;
         }
 
-        #hamburger.is-active .line:nth-child(2){
+        #hamburger.is-active .line:nth-child(2) {
             opacity: 0;
         }
-          
-        #hamburger.is-active .line:nth-child(1){
+
+        #hamburger.is-active .line:nth-child(1) {
             transform: translateY(13px) rotate(45deg);
             background-color: $colorA;
         }
-          
-        #hamburger.is-active .line:nth-child(3){
+
+        #hamburger.is-active .line:nth-child(3) {
             transform: translateY(-13px) rotate(-45deg);
             background-color: $colorA;
         }
     }
 
-    .dropdown-menu{
+    .dropdown-menu {
         position: absolute;
         display: flex;
         flex-direction: column;
@@ -199,10 +213,11 @@
         transition-delay: 0.6s;
         border-top: 3px solid $colorD;
 
-        a{
+        a {
             @include aTag();
         }
-        .nav-item{
+
+        .nav-item {
             height: 100%;
             padding: 0 15px;
             display: flex;
@@ -213,19 +228,23 @@
             letter-spacing: 0.2rem;
             font-size: 1.5rem;
         }
-        .nav-item:hover{
+
+        .nav-item:hover,
+        .nav-item.active {
             @include hover();
         }
 
-        .nav-item::after{
+        .nav-item::after {
             @include after();
         }
 
-        .nav-item:hover::after {
+        .nav-item:hover::after,
+        .nav-item.active::after {
             @include hoverAfter();
         }
     }
-    .dropdown-menu.is-active{
+
+    .dropdown-menu.is-active {
         transition-delay: 0.2s;
         transform: translateY(0vh);
     }
