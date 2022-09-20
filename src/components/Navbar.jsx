@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
 const Navbar = () => {
@@ -17,21 +18,23 @@ const Navbar = () => {
             setActive(!isActive);
     }
 
-    if (logo) {
-        if (location.pathname === "/")
-            logo.classList.add("active")
-        else
-            logo.classList.remove("active")
-    }
-
-    if (items) {
-        for (let i = 0; i < items.length; i++) {
-            if (items[i].innerHTML.toLowerCase() === location.pathname.substring(1))
-                items[i].classList.add("active")
+    useEffect(() => {
+        if (logo) {
+            if (location.pathname === "/")
+                logo.classList.add("active");
             else
-                items[i].classList.remove("active")
+                logo.classList.remove("active");
         }
-    }
+
+        if (items) {
+            for (let i = 0; i < items.length; i++) {
+                if (items[i].innerHTML.toLowerCase() === location.pathname.substring(1))
+                    items[i].classList.add("active");
+                else
+                    items[i].classList.remove("active");
+            }
+        }
+    }, [logo, items, location]);
 
     return (
         <div className="navbar" onClick={toggleDropdown}>
@@ -49,9 +52,6 @@ const Navbar = () => {
                         <div className="nav-item">About</div>
                     </Link>
                     <a href="#">
-                        <div className="nav-item">Skills</div>
-                    </a>
-                    <a href="#">
                         <div className="nav-item">Projects</div>
                     </a>
                     <a href="#">
@@ -68,9 +68,6 @@ const Navbar = () => {
                 <Link to="/about">
                     <div className="nav-item">About</div>
                 </Link>
-                <a href="#">
-                    <div className="nav-item">Skills</div>
-                </a>
                 <a href="#">
                     <div className="nav-item">Projects</div>
                 </a>

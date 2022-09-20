@@ -19,22 +19,21 @@ const Background = () => {
             element.innerHTML = '';
             for (let i = 1; (width / 35) > i; i++) {
                 let span = document.createElement("span");
-                span.style.animationDelay = (Math.random() * 15)+ 's';
-                span.style.animationDuration = (Math.random() * (20 - 10) + 10)+ 's';
-                element.appendChild(span)
+                span.style.animationDelay = (Math.random() * 15) + 's';
+                span.style.animationDuration = (Math.random() * (20 - 10) + 10) + 's';
+                element.appendChild(span);
             }
         }
         else {
             setElement(document.querySelector('.points'));
         }
-    }, [width, element])
+    }, [width, element]);
 
     return (
         <div className="background">
             <div className="points">
             </div>
         </div>
-
     )
 }
 
