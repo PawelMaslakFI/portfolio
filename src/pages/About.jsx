@@ -29,7 +29,7 @@ const About = () => {
 
         if (logos) {
             for (let i = 0; i < logos.length; i++) {
-                logos[i].style.animationDelay = 3 + (i * 0.2) + 's';
+                logos[i].style.animationDelay = 3.5 + (i * 0.2) + 's';
             }
         }
         else {
@@ -58,7 +58,7 @@ const About = () => {
                     </div>
                     <div className="right">
                         <div className="img">
-                            {/* <img src={avatar} alt="" /> */}
+                            <img src={avatar} alt="" />
                         </div>
                     </div>
                 </div>
@@ -78,7 +78,7 @@ const About = () => {
                         </div>
                         <div className="content">
                             <div className="text">
-                                Here are the technologies I have been working with
+                            Here are the technologies I have been working with
                             </div>
                             <div className="list">
                                 <ul>
