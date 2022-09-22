@@ -6,8 +6,8 @@ const Navbar = () => {
 
     const [isActive, setActive] = useState(false);
     const location = useLocation();
-    const items = document.getElementsByClassName("nav-item");
-    const logo = document.getElementById("logo");
+    const items = document.getElementsByClassName('nav-item');
+    const logo = document.getElementById('logo');
 
     const toggleHamburger = () => {
         setActive(!isActive);
@@ -20,59 +20,59 @@ const Navbar = () => {
 
     useEffect(() => {
         if (logo) {
-            if (location.pathname === "/")
-                logo.classList.add("active");
+            if (location.pathname === '/')
+                logo.classList.add('active');
             else
-                logo.classList.remove("active");
+                logo.classList.remove('active');
         }
 
         if (items) {
             for (let i = 0; i < items.length; i++) {
                 if (items[i].innerHTML.toLowerCase() === location.pathname.substring(1))
-                    items[i].classList.add("active");
+                    items[i].classList.add('active');
                 else
-                    items[i].classList.remove("active");
+                    items[i].classList.remove('active');
             }
         }
     }, [logo, items, location]);
 
     return (
-        <div className="navbar" onClick={toggleDropdown}>
-            <div className="wrapper">
-                <div className="nav-left">
-                    <Link to="/">
-                        <div className="logo" id="logo">
-                            <div className="left">K</div>
-                            <div className="right">K</div>
+        <div className='navbar' onClick={toggleDropdown}>
+            <div className='wrapper'>
+                <div className='nav-left'>
+                    <Link to='/'>
+                        <div className='logo' id='logo'>
+                            <div className='left'>K</div>
+                            <div className='right'>K</div>
                         </div>
                     </Link>
                 </div>
-                <div className="nav-right">
-                    <Link to="/about">
-                        <div className="nav-item">About</div>
+                <div className='nav-right'>
+                    <Link to='/about'>
+                        <div className='nav-item'>About</div>
                     </Link>
-                    <a href="#">
-                        <div className="nav-item">Projects</div>
+                    <a href='#'>
+                        <div className='nav-item'>Projects</div>
                     </a>
-                    <a href="#">
-                        <div className="nav-item">Contact</div>
+                    <a href='#'>
+                        <div className='nav-item'>Contact</div>
                     </a>
                 </div>
-                <div className={isActive ? "nav-hamburger is-active" : "nav-hamburger"} id="hamburger" onClick={toggleHamburger}>
-                    <span className="line"></span>
-                    <span className="line"></span>
-                    <span className="line"></span>
+                <div className={isActive ? 'nav-hamburger is-active' : 'nav-hamburger'} id='hamburger' onClick={toggleHamburger}>
+                    <span className='line'></span>
+                    <span className='line'></span>
+                    <span className='line'></span>
                 </div>
             </div>
-            <div className={isActive ? "dropdown-menu is-active" : "dropdown-menu"}>
-                <Link to="/about">
-                    <div className="nav-item">About</div>
+            <div className={isActive ? 'dropdown-menu is-active' : 'dropdown-menu'}>
+                <Link to='/about'>
+                    <div className='nav-item'>About</div>
                 </Link>
-                <a href="#">
-                    <div className="nav-item">Projects</div>
+                <a href='#'>
+                    <div className='nav-item'>Projects</div>
                 </a>
-                <a href="#">
-                    <div className="nav-item">Contact</div>
+                <a href='#'>
+                    <div className='nav-item'>Contact</div>
                 </a>
             </div>
         </div>
