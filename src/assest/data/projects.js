@@ -22,7 +22,7 @@ const projects = [
     {
         title: "Shooter game",
         general: "Vanilla JavaScript.",
-        desc: "Simple shooter in which you have to shoot incoming enemies before they approach you. It has a basic interface, score and on-hit explosions.",
+        desc: "Simple shooter in which you have to kill incoming enemies before they approach you. It has a basic interface, score and on-hit explosions.",
         techstack: "JS, HTML, CSS",
         github: "https://github.com/krychkarol/shooter-game",
         demo: "https://shooter-game-js.herokuapp.com/",
