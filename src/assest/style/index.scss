@@ -3,14 +3,40 @@
 @import './background';
 @import './loader';
 @import './about';
+@import './projects';
+@import './slider';
 
 @import './home';
 
-body{
+html {
+    overflow-y: overlay;
+
+    ::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: $colorD;
+        border-radius: 2px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: $colorB;
+    }
+}
+
+body {
     margin: 0;
     padding: 0;
     min-height: 100vh;
     color: $colorA;
-
     font-family: $fontNormal;
+
+    ::-webkit-scrollbar {
+        width: 20px;
+    }
 }
