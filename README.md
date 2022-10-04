@@ -3,14 +3,7 @@
 ## Still in progress :)
 
 ### Some stuff done
-Loader
-
-Animated BG
-
-Home
-
-About
-
+Loader, Animated BG, Home, About, Projects & Contact pages
 
 ## Live Demo
 Application deployed on Heroku - [Demo](https://portfolio-react-demo.herokuapp.com/)
