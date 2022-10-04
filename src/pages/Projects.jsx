@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import React from 'react'
+import React from 'react';
 import Slider from '../components/Slider';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import data from '../assest/data/projects';

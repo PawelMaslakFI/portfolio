@@ -1,0 +1,76 @@
+@import './global';
+
+.contact {
+    position: absolute;
+    width: 100%;
+    min-height: 100vh - $navHeight;
+    top: 0;
+    margin-top: $navHeight;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 0;
+    overflow: hidden;
+
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: $pading;
+        margin: 20px 0;
+
+        .contact-me {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            padding: 20px 20px;
+            background-color: $colorC-Transparent;
+            animation: flip-in-bottom-left 2s ease-in-out forwards;
+            margin-bottom: 20px;
+
+            .title {
+                font-size: $fluidFontSizeBig;
+                font-family: $fontBold;
+                text-align: start;
+                margin-bottom: 10px;
+                opacity: 0;
+                animation: focus-in-expand 2s ease-in-out 1s forwards;
+            }
+
+            .subtitle {
+
+                font-size: $fluidFontSize;
+                opacity: 0;
+                animation: focus-in 1s ease-in-out 1.5s forwards;
+                font-weight: 600;
+                margin-bottom: 30px;
+            }
+
+            .text {
+                font-size: $fluidFontSize;
+                max-width: 700px;
+                text-align: center;
+                margin-bottom: 40px;
+                opacity: 0;
+                animation: focus-in 1s ease-in-out 1.5s forwards;
+            }
+
+            button{
+                font-size: $fluidFontSize;
+                padding: 20px 30px;
+                background-color: transparent;
+                border: 3px solid $colorA;
+                transition: 0.5s all ease-in-out;
+                opacity: 0;
+                animation: focus-in 1s ease-in-out 1.5s forwards;
+            }
+
+            button:hover{
+                border: 3px solid $colorB;
+                color: $colorB;
+                cursor: pointer;
+            }
+        }
+    }
+}

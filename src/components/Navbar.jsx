@@ -54,9 +54,9 @@ const Navbar = () => {
                     <Link to='/projects'>
                         <div className='nav-item'>Projects</div>
                     </Link>
-                    <a href='#'>
+                    <Link to='/contact'>
                         <div className='nav-item'>Contact</div>
-                    </a>
+                    </Link>
                 </div>
                 <div className={isActive ? 'nav-hamburger is-active' : 'nav-hamburger'} id='hamburger' onClick={toggleHamburger}>
                     <span className='line'></span>
@@ -71,9 +71,9 @@ const Navbar = () => {
                 <Link to='/projects'>
                     <div className='nav-item'>Projects</div>
                 </Link>
-                <a href='#'>
+                <Link to='/contact'>
                     <div className='nav-item'>Contact</div>
-                </a>
+                </Link>
             </div>
         </div>
     )

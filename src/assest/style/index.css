@@ -2118,6 +2118,185 @@
   }
 }
 
+.contact {
+  position: absolute;
+  width: 100%;
+  min-height: 90vh;
+  top: 0;
+  margin-top: 10vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.contact .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0 clamp(10px, 8vw, 200px);
+  margin: 20px 0;
+}
+
+.contact .wrapper .contact-me {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 20px 20px;
+  background-color: rgba(206, 250, 255, 0.5);
+  -webkit-animation: flip-in-bottom-left 2s ease-in-out forwards;
+          animation: flip-in-bottom-left 2s ease-in-out forwards;
+  margin-bottom: 20px;
+}
+
+.contact .wrapper .contact-me .title {
+  font-size: calc((15px + 0.390625vw) * 3);
+  font-family: "Montserrat-Bold";
+  text-align: start;
+  margin-bottom: 10px;
+  opacity: 0;
+  -webkit-animation: focus-in-expand 2s ease-in-out 1s forwards;
+          animation: focus-in-expand 2s ease-in-out 1s forwards;
+}
+
+.contact .wrapper .contact-me .subtitle {
+  font-size: calc(15px + 0.390625vw);
+  opacity: 0;
+  -webkit-animation: focus-in 1s ease-in-out 1.5s forwards;
+          animation: focus-in 1s ease-in-out 1.5s forwards;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.contact .wrapper .contact-me .text {
+  font-size: calc(15px + 0.390625vw);
+  max-width: 700px;
+  text-align: center;
+  margin-bottom: 40px;
+  opacity: 0;
+  -webkit-animation: focus-in 1s ease-in-out 1.5s forwards;
+          animation: focus-in 1s ease-in-out 1.5s forwards;
+}
+
+.contact .wrapper .contact-me button {
+  font-size: calc(15px + 0.390625vw);
+  padding: 20px 30px;
+  background-color: transparent;
+  border: 3px solid #3A4042;
+  -webkit-transition: 0.5s all ease-in-out;
+  transition: 0.5s all ease-in-out;
+  opacity: 0;
+  -webkit-animation: focus-in 1s ease-in-out 1.5s forwards;
+          animation: focus-in 1s ease-in-out 1.5s forwards;
+}
+
+.contact .wrapper .contact-me button:hover {
+  border: 3px solid #67E2FF;
+  color: #67E2FF;
+  cursor: pointer;
+}
+
+@font-face {
+  font-family: "Montserrat-Bold";
+  src: local("Montserrat-Bold"), url(../fonts/Montserrat-Bold.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Montserrat-Light";
+  src: local("Montserrat-Light"), url(../fonts/Montserrat-Light.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Montserrat-Thin";
+  src: local("Montserrat-Thin"), url(../fonts/Montserrat-Thin.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Rosemary";
+  src: local("Rosemary"), url(../fonts/Rosemary.ttf) format("truetype");
+}
+
+@keyframes flip-in-bottom-left {
+  0% {
+    -webkit-transform: rotateX(90deg);
+            transform: rotateX(90deg);
+    opacity: 0;
+    border-left: solid 20px #67E2FF;
+  }
+  100% {
+    -webkit-transform: rotateX(0);
+            transform: rotateX(0);
+    opacity: 1;
+    border-left: solid 5px #67E2FF;
+  }
+}
+
+@keyframes flip-in-bottom-right {
+  0% {
+    -webkit-transform: rotateX(90deg);
+            transform: rotateX(90deg);
+    opacity: 0;
+    border-right: solid 20px #67E2FF;
+  }
+  100% {
+    -webkit-transform: rotateX(0);
+            transform: rotateX(0);
+    opacity: 1;
+    border-right: solid 5px #67E2FF;
+  }
+}
+
+@keyframes focus-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    -webkit-filter: blur(12px);
+            filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+            filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+}
+
 .home {
   position: absolute;
   width: 100%;
